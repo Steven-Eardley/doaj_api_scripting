@@ -65,7 +65,7 @@ if __name__ == '__main__':
                                        on_demand=True)
 
     # There is some overlap between the two files - only read the 2016 entries from this one.
-    for n in workbook_2016.sheet_names()[:1]:
+    for n in workbook_2016.sheet_names():
         if n.endswith('2016'):
             report_sheet(workbook_2016.sheet_by_name(n))
 
@@ -74,6 +74,6 @@ if __name__ == '__main__':
                                        on_demand=True)
 
     # And only read 2017 entries from this one.
-    for n in workbook_2017.sheet_names()[:1]:
+    for n in workbook_2017.sheet_names():
         if n.endswith('2017'):
             report_sheet(workbook_2017.sheet_by_name(n))
